@@ -19,3 +19,4 @@ yolov8/results/*
 vid_inf/outputs/*
 test_output/result/*
 !*requirements.txt
+!rep_*.sh
