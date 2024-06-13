@@ -8,7 +8,7 @@ If used in SCU WAVE HPC, this can be conducted by using the `make_link.sh` to cr
 # for detection
 the detection environment is exported in `detection_requirements.txt` 
 ```python
-conda create --name detection_environment python=3.12
+conda create --name detection_env python=3.12
 conda activate detection_env
 
 #install the dependencies from detection_requirements.txt
@@ -19,7 +19,7 @@ the script for running the detection is named `rep_detection.sh`, default scene 
 # for re-id
 The re-id environment is exported in `reid_requirements.txt`
 ```python
-conda create --name reid_environment python=3.12
+conda create --name reid_env python=3.12
 conda activate reid_env
 
 #install the dependencies from reid_requirements.txt
@@ -31,8 +31,8 @@ the script for running the re-id is named `rep_feature_extraction.sh`
 # for single-camera-tracking
 the sct environment is exported as `sct_requirements.txt` (Note: Please create the conda environment with Python version >3.12.)
 ```python
-conda create --name sct_environment python=3.12
-conda activate singlecam_env
+conda create --name sct_env python=3.12
+conda activate sct_env
 
 #install the dependencies from sct_requirements.txt
 pip install -r sct_requirements.txt
