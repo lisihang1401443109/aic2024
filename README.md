@@ -8,7 +8,7 @@ If used in SCU WAVE HPC, this can be conducted by using the `make_link.sh` to cr
 # for detection
 the detection environment is exported in `detection_requirements.txt`
 
-the script for unning the detection is named `rep_detection.sh`, default scene number is set as scene_061.
+the script for running the detection is named `rep_detection.sh`, default scene number is set as scene_061.
 
 # for re-id
 The re-id environment is exported in `reid_requirements.txt`
