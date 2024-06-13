@@ -28,8 +28,8 @@ def load_cam_embeddings(scene, cam,
     
     
     
-    frame_samples = frame_sample(n_frames)  # TODO: Get your dumbass code here
-    frame_samples_set = set(frame_samples) # TODO: Fk you
+    frame_samples = frame_sample(n_frames)  
+    frame_samples_set = set(frame_samples) 
     
     selected = []
     
