@@ -82,4 +82,19 @@ bash rep_submission.sh
 
 ```
 
+## SCU Senior Design 
 
+Our pipeline was adapted from last year’s winning team’s baseline (
+https://github.com/lisihang1401443109/AIC23_Track1_UWIPL_ETRI). We replaced the detector,single_camera_tracking, re_id, with more promising technologies. 
+
+The detector is replaced with Yolov8 by ultralytics. We made modifications to the ultralytic site-packages to change the logging fashions. We also created separate Python script to run the detection by scenario in a steaming fashion.
+
+The single camera tracking was replaced by UCMC track, for which we write a separate detector class that reads the detection files from disk and is compatible with the rest of the code. We also disabled the camera noise and added a class reading holographic matrix from the dataset instead of from the estimator.
+
+The Reid was implemented using fast-Reid library and in specific we used Duke-BoT-s50 model. We adapted the code to work with the AIC dataset, namingly grouping detection by frame, cropping detections from the frame and feed to the model in a batch fashion.
+
+We introduced a part that is not seen in the previous pipeline: the variance preserving filtering, through which we reduced the number of samples without degradation of the clustering performance. 
+
+For the clustering, we did not change much beside changing the distance metric from Euclidean distance to cosine. We also performed some tuning at this stage.
+
+We did not make much modification in the reassignment part, except for some tuning and extracting location information, which is required this year but not last year. We also wrote script that organize the format into aic-submission ready format.
